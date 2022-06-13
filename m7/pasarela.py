@@ -46,7 +46,7 @@ if __name__ == '__main__':
             print('Sensor running...')
             time.sleep(5)
     except(KeyboardInterrupt, e):
-        logging.info('Program stopped')
+        print('Program stopped')
         micro.close()
 
 
