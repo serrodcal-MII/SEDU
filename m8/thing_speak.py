@@ -31,7 +31,7 @@ if __name__ == '__main__':
         while True:
             
             for row in cur.execute('SELECT id, value, time FROM sensors'):
-                if row[0] != 'cks':
+                if row and row[0] != 'cks':
                     print(row)
                     send(row)
                     con.execute('delete from sensors where id="{}" and value={} and time="{}"'.format(row[0],row[1], row[2]))
